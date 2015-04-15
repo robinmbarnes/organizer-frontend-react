@@ -1,0 +1,27 @@
+@import './mixins';
+@import './helpers';
+@import './modules';
+
+.icon-delete {
+  font-size: 12px;
+}
+
+.todo-label {
+  padding: 10px 12px;
+}
+
+.todo-item {
+  &.todo-item-complete {
+    color: lightgrey;
+    text-decoration: line-through;
+  }
+}
+
+.todo-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.todo-leave.todo-leave-active {
+  opacity: 0.01;
+}

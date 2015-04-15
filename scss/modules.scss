@@ -1,0 +1,92 @@
+.input-group-list {
+  $border-style: 1px solid #ccc;
+
+  margin: 0 0 30px 0;
+  padding: 0;
+  border: $border-style;
+  @include border-radius(4px);
+
+  .input-group {
+    border-bottom: $border-style;
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .input-group-addon {
+      border: 0;
+      &:first-child {
+        border-right: $border-style;
+      }
+      &:last-child {
+        border-left: $border-style;
+      }
+    }
+    .input-group-label {
+      font-weight: normal;
+      padding: 6px 12px;
+      margin: 0;
+      width: 100%;
+      background-color: white;
+    }
+  }
+}
+
+.btn-async {
+  position: relative;
+
+  .btn-async-transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+  }
+
+  .btn-async-content {
+    visibility: visible;
+  }
+
+  &.btn-async-processing {
+    .btn-async-content {
+      visibility: hidden;
+    }
+
+    .btn-async-transition {
+      visibility: visible;
+    }
+  }
+}
+
+.btn-circular {
+  border-radius: 50%;
+  padding: 2px 5px;
+}
+
+.rb-editable-text {
+  div {
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .form-control {
+    border: 0;
+    display: none;
+    padding: 10px;
+    background-color: rgb(221, 233, 236);
+    &:focus {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  &.rb-editable-text-editing {
+    div {
+      display: none;
+    }
+    .form-control {
+      display: block;
+    }
+  }
+}
+
